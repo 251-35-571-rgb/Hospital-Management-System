@@ -1,13 +1,39 @@
 #include <stdio.h>
-#include "utils.h"
+#include "../include/utils.h"
+#include "../include/ui.h"
 
 int main() {
-    printf("Hello, World!\n");
-    int num = utils_get_int();
-    printf("You entered: %d\n", num);
-    printf("Enter your name : ");
-    char *name = utils_get_string(name, 100);
-    printf("You entered: %s\n", name);
-    utils_pause();
+    int choice;
+
+    do {
+        ui_main_menu();
+        choice = utils_get_int();
+        
+        switch (choice) {
+            case 1:
+                ui_print_info("Patient Management - Coming soon!");
+                utils_pause();
+                break;
+            case 2:
+                ui_print_info("Doctor Management - Coming soon!");
+                utils_pause();
+                break;
+            case 3:
+                ui_print_info("Appointment Management - Coming soon!");
+                utils_pause();
+                break;
+            case 4:
+                ui_print_info("Reports - Coming soon!");
+                utils_pause();
+                break;
+            case 5:
+                ui_print_success("Goodbye!");
+                break;
+            default:
+                ui_print_error("Invalid choice!");
+                utils_pause();
+        }
+    } while (choice != 5);
+
     return 0;
 }
