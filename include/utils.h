@@ -62,6 +62,7 @@ char* utils_get_string(char *str, size_t size);
  * Validates if a phone number is in correct format.
  * 
  * @param phone The phone number string to validate.
+ *
  * @return true if valid, false otherwise.
  */
 bool utils_is_valid_phone(const char *phone);
@@ -70,6 +71,7 @@ bool utils_is_valid_phone(const char *phone);
  * Validates if an email contains @ and .
  * 
  * @param email The email string to validate.
+ *
  * @return true if valid, false otherwise.
  */
 bool utils_is_valid_email(const char *email);
@@ -78,8 +80,18 @@ bool utils_is_valid_email(const char *email);
  * Validates if a name contains only letters and spaces.
  * 
  * @param name The name to validate.
+ *
  * @return true if valid name, false otherwise.
  */
 bool utils_is_valid_name(const char *name);
+
+/**
+ * Converts a string to uppercase in-place.
+ *
+ * @param str The string to convert.
+ *
+ * @return The uppercase string.
+ */
+char* utils_str_to_upper(char *str);
 
 #endif

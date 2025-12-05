@@ -9,7 +9,7 @@ void utils_clear_input_buffer(void) {
 }
 
 void utils_pause(void) {
-    printf("Press any key to continue...\n");
+    printf("\nPress any key to continue...");
     getchar();
 }
 
@@ -121,4 +121,12 @@ bool utils_is_valid_name(const char *name) {
     }
     
     return true;
+}
+
+char* utils_str_to_upper(char *str) {
+    if (str == NULL) return NULL;
+    for (int i = 0; str[i] != '\0'; i++) {
+        str[i] = toupper(str[i]);
+    }
+    return str;
 }
