@@ -14,17 +14,51 @@
 * Generates a unique patient ID.
 * @return The generated patient ID.
 */
-int generate_patient_id(void);
+int patient_generate_id(void);
+
+/**
+ * Adds a new patient to the system.
+ */
+void patient_add(void);
+
+/**
+ * Searches for a patient by ID.
+ */
+void patient_search_by_id(void);
+
+/**
+ * Searches for a patient by name.
+ */
+void patient_search_by_name(void);
+
+/**
+ * Searches for a patient by phone number.
+ */
+void patient_search_by_phone(void);
 
 /**
  * Handles the search choice for patient.
  */
- void search_patient_by(void);
+ void patient_search_by(void);
+
+/**
+ * Updates a patient information by ID.
+ */
+void patient_update_using_id(void);
+
+/**
+ * Deletes a patient by ID.
+ */
+void patient_delete_by_id(void);
 
 /**
  * Displays the patient management menu and handles user input.
  */
- void receptionist_menu(void);
+ void patient_receptionist_menu(void);
 
+/**
+ * Displays all patients in the system.
+ */
+ void patient_view_all(void);
 
 #endif
