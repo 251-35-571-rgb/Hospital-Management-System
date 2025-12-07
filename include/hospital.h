@@ -1,4 +1,114 @@
+/**
+ * @file hospital.h
+ * @brief Core data structures and definitions for Healthcare Management System
+ * 
+ * This header defines all shared structures, enumerations, and constants
+ * used throughout the HMS application.
+ */
+
 #ifndef HOSPITAL_H
 #define HOSPITAL_H
+
+#include <stdbool.h>
+
+/*
+ *==========================================================================
+ *                              CONSTANTS
+ *==========================================================================
+ */
+
+#define MAX_PATIENTS    100
+#define MAX_DOCTORS     50
+#define MAX_USERS       20
+
+#define NAME_SIZE       50
+#define PHONE_SIZE      15
+#define EMAIL_SIZE      50
+#define ADDRESS_SIZE    100
+#define SPEC_SIZE       30      /* Specialization */
+#define BLOOD_SIZE      5       /* Blood group */
+#define USERNAME_SIZE   30
+#define PASSWORD_SIZE   50
+
+#define DATA_DIR        "data/"
+#define PATIENTS_FILE   "data/patients.dat"
+#define DOCTORS_FILE    "data/doctors.dat"
+#define USERS_FILE      "data/users.dat"
+
+#define PATIENT_ID_START    1001
+#define DOCTOR_ID_START     2001
+#define USER_ID_START       3001
+
+/*
+ *==========================================================================
+ *                              ENUMERATIONS
+ *==========================================================================
+ */
+
+typedef enum {
+    ROLE_ADMIN,
+    ROLE_DOCTOR,
+    ROLE_RECEPTIONIST
+} UserRole;
+
+typedef enum { 
+    MALE, 
+    FEMALE 
+} Gender;
+
+/*
+ *==========================================================================
+ *                              STRUCTURES
+ *==========================================================================
+ */
+
+typedef struct {
+    int id;
+    char name[NAME_SIZE];
+    int age;
+    Gender gender;
+    char phone[PHONE_SIZE];
+    char address[ADDRESS_SIZE];     
+    char blood_group[BLOOD_SIZE];   
+    bool is_active;
+} Patient;
+
+typedef struct {
+    int id;
+    char name[NAME_SIZE];
+    char phone[PHONE_SIZE];
+    char email[EMAIL_SIZE];
+    char specialization[SPEC_SIZE];
+    int room_number;
+    bool is_available;
+    bool is_active;
+} Doctor;
+
+typedef struct {
+    int id;
+    char username[USERNAME_SIZE];
+    char password[PASSWORD_SIZE];
+    UserRole role;
+    bool is_active;
+} User;
+
+/*
+ *==========================================================================
+ *                          GLOBAL DECLARATIONS
+ *==========================================================================
+ */
+
+/* Global declarations for data arrays */
+extern Patient patients[MAX_PATIENTS];
+extern Doctor doctors[MAX_DOCTORS];
+extern User users[MAX_USERS];
+
+/* User count variables */
+extern int patient_count;
+extern int doctor_count;
+extern int user_count;
+
+/* Current user */
+extern User* current_user;
 
 #endif

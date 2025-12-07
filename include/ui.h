@@ -1,6 +1,3 @@
-#ifndef UI_H
-#define UI_H
-
 /**
  * @file ui.h
  * @brief Header file for user interface functions.
@@ -9,83 +6,9 @@
  * used in the hospital management system.
  */
 
-/* 
- *==========================================================================
- *                         ANSI COLOR CODES                                  
- *==========================================================================
- */
+#ifndef UI_H
+#define UI_H
 
-/* Basic Foreground Colors */
-#define BLACK          "\033[30m"
-#define RED            "\033[31m"
-#define GREEN          "\033[32m"
-#define BLUE           "\033[34m"
-#define YELLOW         "\033[33m"
-#define MAGENTA        "\033[35m"
-#define CYAN           "\033[36m"
-#define WHITE          "\033[37m"
-
-/* Bright Foreground Colors */
-#define BRIGHT_BLACK   "\033[90m"
-#define BRIGHT_RED     "\033[91m"
-#define BRIGHT_GREEN   "\033[92m"
-#define BRIGHT_YELLOW  "\033[93m"
-#define BRIGHT_BLUE    "\033[94m"
-#define BRIGHT_MAGENTA "\033[95m"
-#define BRIGHT_CYAN    "\033[96m"
-#define BRIGHT_WHITE   "\033[97m"
-
-/* Extended Foreground Colors (256-color palette) */
-#define LIME           "\033[38;5;154m"
-#define SOFT_CYAN      "\033[38;5;159m"
-#define SOFT_TEAL      "\033[38;5;44m"
-#define SOFT_GREEN     "\033[38;5;120m"
-#define SOFT_BLUE      "\033[38;5;75m"
-#define SOFT_GRAY      "\033[38;5;250m"
-#define SOFT_YELLOW    "\033[38;5;187m"
-
-/* Neon Accent Colors */
-#define NEON_TEAL      "\033[38;5;51m"
-#define NEON_PINK      "\033[38;5;205m"
-#define NEON_PURPLE    "\033[38;5;141m"
-#define NEON_ORANGE    "\033[38;5;208m"
-
-/* Status Colors */
-#define STATUS_GOOD    "\033[38;5;114m"
-#define STATUS_WARN    "\033[38;5;214m"
-#define STATUS_BAD     "\033[38;5;160m"
-#define STATUS_INFO    "\033[38;5;75m"
-
-/* Muted/Dim Text Colors */
-#define TEXT_MUTED     "\033[38;5;244m"
-#define TEXT_DIM       "\033[38;5;240m"
-
-/* Basic Background Colors */
-#define BG_BLACK       "\033[40m"
-#define BG_WHITE       "\033[47m"
-
-/* Bright Background Colors */
-#define BG_BRIGHT_BLACK   "\033[100m"
-#define BG_BRIGHT_RED     "\033[101m"
-#define BG_BRIGHT_GREEN   "\033[102m"
-#define BG_BRIGHT_YELLOW  "\033[103m"
-
-/* Extended Background Colors */
-#define BG_NEON_PURPLE "\033[48;5;57m"
-#define BG_NEON_TEAL   "\033[48;5;43m"
-
-/* Text Styles */
-#define RESET          "\033[0m"
-#define BOLD           "\033[1m"
-#define UNDERLINE      "\033[4m"
-
-/* 
- *========================================================================== 
- *                         FUNCTION PROTOTYPES                                
- *========================================================================== 
- */
-
- 
 /* 
  *==========================================================================
  *                         ANSI COLOR CODES                                  
@@ -167,8 +90,6 @@
  * Clears the console screen.
  */
  void ui_clear_screen(void);
- 
-/**
 
  
 /**

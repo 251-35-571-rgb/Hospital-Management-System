@@ -1,3 +1,11 @@
+/**
+ * @file ui.c
+ * @brief User interface functions for Healthcare Management System
+ * 
+ * This file contains the implementation of user interface functions
+ * used throughout the HMS application.
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>

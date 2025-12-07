@@ -1,3 +1,11 @@
+/**
+ * @file utils.c
+ * @brief Utility functions for Healthcare Management System
+ * 
+ * This file contains the implementation of utility functions
+ * used throughout the HMS application.
+ */
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>

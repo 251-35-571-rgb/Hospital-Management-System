@@ -1,3 +1,10 @@
+/**
+ * @file utils.h
+ * @brief Utility functions for Healthcare Management System
+ * 
+ * This header defines all shared utility functions used throughout the HMS application.
+ */
+
 #ifndef UTILS_H
 #define UTILS_H
 
